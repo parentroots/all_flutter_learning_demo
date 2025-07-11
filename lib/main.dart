@@ -47,7 +47,7 @@ class Home extends StatelessWidget{
             ),
             ),
               backgroundColor: Colors.blue,
-
+              duration: Duration(seconds: 1),
             )
 
             );
