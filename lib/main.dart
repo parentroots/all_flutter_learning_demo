@@ -35,28 +35,53 @@ class Home extends StatelessWidget{
         ),),
 
         leading: Icon(Icons.home,color: Colors.white,size: 35,),
-
         actions: [
+
+          IconButton(onPressed: (){
+
+            ScaffoldMessenger.of(context).showSnackBar(
+           SnackBar(content: Text("hello world",style: TextStyle(
+
+             fontSize: 30,color: Colors.white
+           ),
+
+           ),
+
+             backgroundColor: Colors.blue,
+           )
+
+            );
+
+          }, icon: Icon(Icons.menu)),
+
 
 
           IconButton(onPressed: (){
-            ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("hello i am snackbar message",style: TextStyle(
-              color: Colors.white,
-              fontSize: 30
-            ),
-            ),
-              backgroundColor: Colors.blue,
-              duration: Duration(seconds: 1),
-            )
+
+            showDialog(context: context, builder: (context){
+
+              return AlertDialog(
+                
+                title: Text("i am a dialog"),
+                content: Text("I am dialog message"),
+              );
+
+
+            },
 
             );
-          }, icon: Icon(Icons.menu)),
 
+
+          }, icon: Icon(Icons.home)),
         ],
-
-
       ),
+
+
+
+
+
+
+
     );
   }
 
