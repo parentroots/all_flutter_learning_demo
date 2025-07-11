@@ -78,6 +78,22 @@ class Home extends StatelessWidget{
 
 
 
+      body: Center(
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+
+            Text("Hello world",style: TextStyle(fontSize: 40),),
+            Text("Hello world",style: TextStyle(fontSize: 40),),
+            Text("Hello world",style: TextStyle(fontSize: 40),)
+          ],
+        ),
+
+
+
+      ),
 
 
 
