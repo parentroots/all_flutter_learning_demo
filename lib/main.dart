@@ -77,7 +77,64 @@ class Home extends StatelessWidget{
                 ),
                 child: Text("textButton",style: TextStyle(
               fontSize: 30,
-            ),))
+            ),)),
+
+
+            GestureDetector(
+
+              onLongPress: (){
+                print("pressed");
+              },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(onPressed: (){}, child: Text("button",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30
+
+                  ),
+                  ),
+                    style: TextButton.styleFrom(
+                      fixedSize: Size(200, 60),
+                    ),
+
+                  )
+
+
+                ],
+
+              ),
+
+
+            ),
+
+
+
+            Padding(
+                padding: EdgeInsets.all(15),
+              child:  TextField(
+               maxLength: 30,
+                style:TextStyle(
+                  color: Colors.black,
+                  fontSize:30,
+                ),
+                decoration: InputDecoration(
+                  labelText: "Enter Your Email",
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(width: 4,color: Colors.black)
+                    ),
+                    prefixIcon: Icon(Icons.mail),
+                    suffixIcon: Icon(Icons.remove_red_eye),
+                    suffixIconColor: Colors.green,
+                    prefixIconColor: Colors.blue,
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(width: 4,color: Colors.blue),
+
+                    )
+                ),
+              ),
+            )
 
 
 
@@ -86,7 +143,6 @@ class Home extends StatelessWidget{
 
 
         ),
-
 
       ),
 
